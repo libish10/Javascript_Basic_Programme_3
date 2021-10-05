@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Method</title>
+</head>
+
+<body>
+    <script>
+        function student_details() {
+            this.name = "Dyna";
+            this.country = "England"
+            this.intro = () => {
+                return `${this.name} is from  ${this.country}`
+            }
+        }
+
+        student_details.prototype.welcome = function() {
+            return `I am ${this.name}`
+        }
+        student_details.prototype.Residential = function() {
+            return `I am from ${this.country}`;
+        }
+        console.log(student_details);
+        var person1 = new student_details;
+        console.log(person1.welcome())
+        console.log(person1.Residential())
+        console.log(person1.intro())
+        console.log(student_details.prototype);
+    </script>
+</body>
+
+</html>

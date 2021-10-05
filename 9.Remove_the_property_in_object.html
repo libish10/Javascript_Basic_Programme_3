@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove the property in an object</title>
+</head>
+
+<body>
+    <script>
+        var marks = {
+            English: 80,
+            Tamil: 100,
+            Maths: 100,
+            Science: 89,
+        }
+        delete marks.Science;
+        delete marks["English"];
+        console.log(marks);
+    </script>
+</body>
+
+</html>

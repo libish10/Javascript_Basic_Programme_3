@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check the occurence of the character</title>
+</head>
+
+<body>
+    <script>
+        var str = prompt("Enter the string");
+        var letter = prompt("Enter the letter");
+        console.log(occurence(str, letter));
+
+        function occurence(str, letter) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] == letter) {
+                    count++;
+                }
+            }
+            return `${letter} => ${count}`;
+
+
+        }
+    </script>
+</body>
+
+</html>

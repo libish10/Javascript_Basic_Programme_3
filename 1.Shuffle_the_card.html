@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Shuffle the card
+    </title>
+</head>
+
+<body>
+    <script>
+        var cardName = ["Spades", "Diamonds", "Club", "Heart"];
+        var values = ["Ace", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"];
+        var deck = [];
+        for (let j = 0; j < cardName.length; j++) {
+            for (let i = 0; i < values.length; i++) {
+
+                let card = {
+                    CardName: cardName[j],
+                    Values: values[i],
+
+                };
+                deck.push(card);
+            }
+        }
+        console.log(deck);
+
+        for (let i = deck.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * i);
+            console.log(j)
+            let temp;
+            temp = deck[i];
+            deck[i] = deck[j];
+            deck[j] = temp;
+        }
+        console.log("First Ten cards are : ")
+        for (let i = 0; i < 10; i++) {
+            console.log(`${deck[i].CardName} of ${deck[i].Values}`);
+        }
+    </script>
+
+</body>
+
+</html>
+
+</html>
